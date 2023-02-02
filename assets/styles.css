@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Red Hat Display', sans-serif;
+    list-style: none;
+}
+
+body {
+    margin: auto;
+    min-height: 100vh;
+    background-color: hsl(224 100% 94%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    height: 43rem;
+    width: 28rem;
+    background-color: rgb(255, 255, 255);
+    border-radius: 1.5rem;
+}
