@@ -6,18 +6,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="https://ez-css.now.sh">
+    <style>
+        .done {
+            text-decoration: line-through;
+        }
+    </style>
 
     <title>Simple Vue.js ToDo List</title>
 </head>
 <body>
     <main id="app">
-        <h3>{{title}}</h3>
-        <form>
-            <label for="newTodo">New ToDo</label>
-            <input type="text" name="newTodo" id="newTodo" value="">
+        <h3>
+            {{title}}
+        </h3>
+        <form @submit.prevent= "addTodo">
+            <label for= "newTodo" >New ToDo</label>
+            <input 
+                v-model="newTodo" 
+                type="text" 
+                name="newTodo" 
+                id="newTodo" 
+                value=""
+            >
             <button type="submit" name="button">Add</button>
         </form>
-
+            <button @click="allDone" type="button" name="All Done">All Done</button>
+        <ul>
+            <li v-for="todo in todos" >
+                <input type="checkbox" v-model="todo.done">
+                <span :class="{ done: todo.done }">{{todo.title}}</span>
+                <button @click="removeTodo(todo)" type="button" name="button">Remove</button>
+            </li>
+        </ul>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="app.js"></script>
