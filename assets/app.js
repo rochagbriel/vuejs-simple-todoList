@@ -1,7 +1,7 @@
 const app = new Vue({
     el: '#app',
     data: {
-        title: 'Simple Vue.js ToDo List',
+        title: 'Simple To Do List',
         newTodo: '',
         todos: []
     },
