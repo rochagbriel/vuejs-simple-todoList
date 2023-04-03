@@ -1,1 +1,1 @@
-A Simple Vue.js Todo list(not styled yet)
+A Simple Todo list using Vue.js(not styled yet)
